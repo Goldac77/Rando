@@ -2,21 +2,21 @@ const textInput = document.querySelector("#text_input");
 var display = document.querySelector("#display");
 const randoBtn = document.querySelector("#rando_btn");
 
-var displayText = ["Name", "Age", "height"];
+var displayText = [];
 
 //After enter is pressed in the text input, update displayText list
 textInput.addEventListener("keydown", (event) => {
     if(event.key == "Enter"){
-        if(textInput.value !== null){
+        if(textInput.value !== ""){
             displayText.push(textInput.value)
         }
-        console.log(displayText);
-        displayArea(displayText);
+        textInput.value = "";
+        Refresh(displayText);
     }
 });
 
 //Clear the display and display updated text
-function displayArea(displayText) {
+function Refresh(displayText) {
     display.innerHTML = "";
     for(let i = 0; i < displayText.length; i++) {
         display.innerHTML += 
@@ -25,4 +25,13 @@ function displayArea(displayText) {
         `
     }
 }
-displayArea(displayText);
+Refresh(displayText);
+
+randoBtn.addEventListener("click", () => {
+    let num = displayText.length;
+    if(num == 0){
+        alert("Enter some text first!")
+    } else {
+        alert(displayText[Math.floor(Math.random() * num)]);
+    }
+})
