@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://imgbb.com/upload.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <h3>Add Product</h3>
+    <form id="addProductForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="description" placeholder="Description" required>
+        <input type="number" id="price" placeholder="Price" required>
+        <input type="file" name="image" accept="image/*" id="productImage" required>
+        <input type="text" name="category" id="category" placeholder="Category" required>
+        <input type="number" id="inventoryCount" name="inventoryCount" min="0" placeholder="inventoryCount" required>
+        <button type="submit">Add Product</button>
+    </form>
+
+    <h3>Add Category</h3>
+    <form id="addCategoryForm">
+        <input type="text" id="categoryName" name="categoryName" placeholder="Category Name" required>
+        <input type="text" name="description" id="categoryDescription" placeholder="Category Description" required>
+        <button type="submit">Add Category</button>
+    </form>
+
+    <script src="./scripts/dashboard.js"></script>
+</body>
+</html>

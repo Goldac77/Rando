@@ -5,26 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rando</title>
+    <title>Signup</title>
 </head>
 <body>
 
-    <div id="main">
-        <h3>Welcome to <br> Go Rando Go!</h3>
-        <p>Enter words or numbers and press the button to pick one at random</p>
-        <div id="input">
-            <input type="text" name="" id="text_input" placeholder="Enter text">
-        </div>
+    <h1>Sign Up Page</h1>
+    <form id="signupForm">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <input type="text" id="location" name="location" placeholder="Location" required>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+      </form>
 
-        <div id="display">
-            <!--Display-->
-        </div>
-
-        <div id="rando_btn_div">
-            <button id="rando_btn" type="button">Go Rando Go</button>
-        </div>
-    </div>
+      <a href="./login.html">Login here</a>
     
-    <script src="script.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
