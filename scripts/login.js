@@ -11,7 +11,7 @@ login.addEventListener('submit', async (event) => {
     };
 
     // Send login request to the server
-    const response = await fetch('http://localhost:8000/seller/login', {
+    const response = await fetch('https://server-side-xuwi.onrender.com/seller/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(loginData)

@@ -16,7 +16,7 @@ form.addEventListener('submit', async (event) => {
     };
 
     // Send signup data to the server
-    const response = await fetch('http://localhost:8000/seller/signup', {
+    const response = await fetch('https://server-side-xuwi.onrender.com/seller/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

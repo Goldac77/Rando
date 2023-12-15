@@ -48,7 +48,7 @@ uploadProduct.addEventListener("submit", async (event) => {
     };
 
     //send data to backend
-    const response = await fetch(`http://localhost:8000/seller/upload/${sellerId}`, {
+    const response = await fetch(`https://server-side-xuwi.onrender.com/seller/upload/${sellerId}`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(productData)
@@ -73,7 +73,7 @@ addCategory.addEventListener("submit", async(event) => {
         description
     }
 
-    const response = await fetch("http://localhost:8000/seller/category", {
+    const response = await fetch("https://server-side-xuwi.onrender.com/seller/category", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(categoryData)
