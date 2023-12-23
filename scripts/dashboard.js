@@ -32,7 +32,7 @@ uploadProduct.addEventListener("submit", async (event) => {
 
         // Use the imageUrl as needed (e.g., save it to your project data)
 
-        console.log('Image URL:', imageUrl);
+        //console.log('Image URL:', imageUrl);
     } catch (error) {
         console.error('Error uploading image:', error);
     }
@@ -52,8 +52,6 @@ uploadProduct.addEventListener("submit", async (event) => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(productData)
     });
-
-    console.log(productData)
 
     const data = await response.json();
     if (response.ok) {
