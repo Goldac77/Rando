@@ -1,5 +1,4 @@
 const uploadProduct = document.querySelector("#addProductForm");
-const addCategory = document.querySelector("#addCategoryForm");
 
 
 //Add Product Logic
@@ -54,6 +53,8 @@ uploadProduct.addEventListener("submit", async (event) => {
         body: JSON.stringify(productData)
     });
 
+    console.log(productData)
+
     const data = await response.json();
     if (response.ok) {
         alert(data.message || 'Product added successfully');
@@ -62,27 +63,3 @@ uploadProduct.addEventListener("submit", async (event) => {
     }
 })
 
-//Add Category Logic
-addCategory.addEventListener("submit", async(event) => {
-    event.preventDefault();
-    const name = document.querySelector("#categoryName").value;
-    const description = document.querySelector("#categoryDescription").value;
-
-    const categoryData = {
-        name,
-        description
-    }
-
-    const response = await fetch("https://server-side-xuwi.onrender.com/seller/category", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(categoryData)
-    })
-
-    const data = await response.json();
-    if (response.ok) {
-        alert(data.message || 'Category added successfully');
-    } else {
-        alert(data.message || 'Failed to add category');
-    }
-})

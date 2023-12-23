@@ -15,16 +15,14 @@
         <input type="text" id="description" placeholder="Description" required>
         <input type="number" id="price" placeholder="Price" required>
         <input type="file" name="image" accept="image/*" id="productImage" required>
-        <input type="text" name="category" id="category" placeholder="Category" required>
+        <select name="category" id="category" required>
+            <option value="" selected disabled>--Select a category--</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="fruits">Fruits</option>
+            <option value="meat_and_fish">Meat & Fish</option>
+        </select>
         <input type="number" id="inventoryCount" name="inventoryCount" min="0" placeholder="inventoryCount" required>
         <button type="submit">Add Product</button>
-    </form>
-
-    <h3>Add Category</h3>
-    <form id="addCategoryForm">
-        <input type="text" id="categoryName" name="categoryName" placeholder="Category Name" required>
-        <input type="text" name="description" id="categoryDescription" placeholder="Category Description" required>
-        <button type="submit">Add Category</button>
     </form>
 
     <script src="./scripts/dashboard.js"></script>
